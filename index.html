@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Work</title>
+    <style>
+        #body[data-mode='off'] {
+           background-image: url(img/bulb_off.gif);
+           background-repeat: no-repeat;
+            color: black;
+            text-align: left;
+       
+        }
+        #body[data-mode='on'] {
+            background-image: url(img/bulb_on.gif);
+            background-repeat: no-repeat;
+            color: darkblue;
+            text-align: left;
+       
+        }
+
+    </style>
+</head>
+<body id="body" data-mode="on">
+    <h1>i am doing this</h1>
+    <p id="txt">shadrach taught me</p>
+    <br>
+    <br>
+    <br>
+    <input type="button" id="btn" value="Switch mode" onclick="work()">
+
+
+    <script>
+    function work(){
+    var body = document.getElementById('body');
+    var mode = body.getAttribute('data-mode');
+
+    if (mode == 'on') {
+        body.setAttribute('data-mode', 'off');
+        
+    } else if (mode == 'off') {
+        body.setAttribute('data-mode', 'on');
+        
+    }
+    }
+    </script>
+</body>
+</html>
